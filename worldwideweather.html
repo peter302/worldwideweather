@@ -6,6 +6,19 @@
   <link href="worldwideweather.css"rel="stylesheet" type="text/css">
   </head>
   <body>
+    <nav class="navbar navbar-default" style="display:inline;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">worldwideweather</a>
+    </div>
+    <ul class="nav navbar-nav" >
+      <li class="active" style="display:inline;"><a href="#">Home</a></li>
+      <li style="display:inline;"><a href="#">current</a></li>
+      <li style="display:inline;"><a href="#">future</a></li>
+      <li style="display:inline;"><a href="#">past</a></li>
+    </ul>
+  </div>
+</nav>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -14,13 +27,16 @@
   </div>
 </div>
 </div>
-<div class="row" style="margin-top:70px;align-content:center">
-    <input type="text" id="submit"><button type="submit" id="sub2">get weather</button>
+<div  class="row" style="margin-top:70px;align-content:center">
+  <div id="error"class="alert alert-danger alert-dismissible">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>field cannot be empty!please click on get weather button again and i will disappear</strong>
+</div><br>
+    <input type="text" id="submit"><button type="submit" id="sub2">get weather</button></div>
     <br>
     <br>
     <div id="display"></div>
-</div>
-</div>
+
 <div class="footer">
 </div>
 <script

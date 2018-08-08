@@ -1,8 +1,10 @@
 //front-end logic
 $(document).ready(function(){
+  $("#error").hide();
   $("#sub2").click(function(event){
     event.preventDefault();
     var city=$("#submit").val()
+    if(city !=''){
     $.ajax({
       url:'http://api.openweathermap.org/data/2.5/weather?q='+city+ "&units=metric"+"&APPID=5c3e6d8e67832b9a2a8451929f80bda4",
       type:"GET",
@@ -14,7 +16,22 @@ $(document).ready(function(){
 
       }
     })
+  }else{
+    $("#error").toggle();
+  }
 })
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
 })
 //end front-end logic
 //business logic
@@ -24,15 +41,15 @@ function display(data){
          "<h2>latitude:"+data.coord.lat+"</h2>"+
          "<h2>weather condition:"+data.weather[0].main+"</h2>"+
          "<h2>weather description:"+data.weather[0].description+"</h2>"+
-         "<h2>temp:"+data.main.temp+"&deg:c</h2>"+
-         "<h2>temp_min:"+data.main.temp_min+"&deg:c</h2>"+
-         "<h2>temp_max"+data.main.temp_max+"&deg:c</h2>"+
-         "<h2>humidity:"+data.main.humidity+"</h2>"+
+         "<h2>temp:"+data.main.temp+"&deg C</h2>"+
+         "<h2>temp_min:"+data.main.temp_min+"&deg C</h2>"+
+         "<h2>temp_max"+data.main.temp_max+"&deg C</h2>"+
+         "<h2>humidity:"+data.main.humidity+"%</h2>"+
          "<h2>pressure:"+data.main.pressure+"hpa</h2>"+
          "<h2>sea_level:"+data.main.sea_level+"hpa</h2>"+
          "<h2>grnd_level:"+data.main.grnd_level+"hpa</h2>"+
          "<h2>wind speed:"+data.wind.speed+"m/s</h2>"+
          "<h2>wind direction:"+data.wind.deg+"&deg</h2>"+
-         "<h2>clouds:"+data.clouds.all+"</h2>"
+         "<h2>clouds:"+data.clouds.all+"%</h2>"
 
 }
