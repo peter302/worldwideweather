@@ -19,19 +19,20 @@ $(document).ready(function(){
 //end front-end logic
 //business logic
 function display(data){
-  return "<h2>longtude:"+data.coord.lon+"</h2>"
-         "<h2>latitude:"+data.coord.lat+"</h2>"
+  return "<h2>name:"+data.name+"</h2>"+
+         "<h2>longtude:"+data.coord.lon+"</h2>"+
+         "<h2>latitude:"+data.coord.lat+"</h2>"+
          "<h2>weather condition:"+data.weather[0].main+"</h2>"+
-         "<h2>weather description:"+data.weather[0].description+"</h2>"
-         "<h2>temp:"+data.main.temp+"</h2>"
-         "<h2>temp_min:"+data.main.temp_min+"</h2>"
-         "<h2>temp_max"+data.main.temp_max+"</h2>"
-         "<h2>humidity:"+data.main.humidity+"</h2>"
-         "<h2>pressure:"+data.main.pressure+"</h2>"
-         "<h2>sea_level:"+data.main.sea_level+"</h2>"
-         "<h2>grnd_level:"+data.main.grnd_level+"</h2>"
-         "<h2>wind speed:"+data.wind.speed+"</h2>"
-         "<h2>wind direction:"+data.wind.deg+"</h2>"
+         "<h2>weather description:"+data.weather[0].description+"</h2>"+
+         "<h2>temp:"+data.main.temp+"&deg:c</h2>"+
+         "<h2>temp_min:"+data.main.temp_min+"&deg:c</h2>"+
+         "<h2>temp_max"+data.main.temp_max+"&deg:c</h2>"+
+         "<h2>humidity:"+data.main.humidity+"</h2>"+
+         "<h2>pressure:"+data.main.pressure+"hpa</h2>"+
+         "<h2>sea_level:"+data.main.sea_level+"hpa</h2>"+
+         "<h2>grnd_level:"+data.main.grnd_level+"hpa</h2>"+
+         "<h2>wind speed:"+data.wind.speed+"m/s</h2>"+
+         "<h2>wind direction:"+data.wind.deg+"&deg</h2>"+
          "<h2>clouds:"+data.clouds.all+"</h2>"
 
 }
