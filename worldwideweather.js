@@ -20,18 +20,6 @@ $(document).ready(function(){
     $("#error").toggle();
   }
 })
-var video = document.getElementById("myVideo");
-var btn = document.getElementById("myBtn");
-
-function myFunction() {
-  if (video.paused) {
-    video.play();
-    btn.innerHTML = "Pause";
-  } else {
-    video.pause();
-    btn.innerHTML = "Play";
-  }
-}
 })
 //end front-end logic
 //business logic
