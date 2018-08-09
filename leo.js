@@ -1,34 +1,31 @@
-//front-end logic
-$(document).ready(function(){
-  $("#error").hide();
-  $("#sub2").click(function(event){
-    event.preventDefault();
-    var city=$("#submit").val()
-    if(city !=''){
+function weather(){
+  navigator.geolocation.getCurrentPosition(location);
+  function location(position){
+    var longitude=position.coords.longitude;
+    var latitude=position.coords.latitude;
+    $("#location").html(longitude +","+ latitude);
     $.ajax({
-      url:'http://api.openweathermap.org/data/2.5/weather?q='+city+ "&units=metric"+"&APPID=5c3e6d8e67832b9a2a8451929f80bda4",
+      url:"http://api.openweathermap.org/data/2.5/weather?lat="+latitude+"&lon="+longitude+"&units=metric"+"&APPID=5c3e6d8e67832b9a2a8451929f80bda4",
       type:"GET",
       dataType:"jsonp",
       success:function(data){
-        var callback=display(data);
-        $("#display").html(callback)
-        $("#submit").val("")
+          var vip=display(data);
+          $("#temp").html(vip)
 
-      }
-    })
-  }else{
-    $("#error").toggle();
+
+        }
+
+      })
+    }
+  $("#temp").html("loading.....")
   }
-})
-})
-//end front-end logic
-//business logic
+weather();
 function display(data){
   return "<h2>name:"+data.name+"</h2>"+
          "<h2>longtude:"+data.coord.lon+"&deg</h2>"+
          "<h2>latitude:"+data.coord.lat+"&deg</h2>"+
          "<h2>weather condition:"+data.weather[0].main+"</h2>"+
-         "<h2>weather description:<img src='http://openweathermap.org/img/w/'+data.weather[0].icon+'&.png'>"+data.weather[0].description+"</h2>"+
+         "<h2>weather description:"+data.weather[0].description+"</h2>"+
          "<h2>temp:"+data.main.temp+"&deg C</h2>"+
          "<h2>temp_min:"+data.main.temp_min+"&deg C</h2>"+
          "<h2>temp_max"+data.main.temp_max+"&deg C</h2>"+
