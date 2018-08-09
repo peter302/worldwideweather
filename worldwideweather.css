@@ -30,3 +30,10 @@ body{
 #sub2{
     background-color: #1a7184;
 }
+#two{
+  background-size: cover;
+  background-color: #6dc43e
+  color: white;
+  background-attachment: fixed;
+  opacity: 0.5;
+}
