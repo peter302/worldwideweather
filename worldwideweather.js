@@ -24,7 +24,7 @@ $(document).ready(function(){
 //end front-end logic
 //business logic
 function display(data){
-  return "<h2>name:"+data.name+"</h2>"+
+  return "<h2>name:"+data.name+" "+data.sys.country+"</h2>"+
          "<h2>longtude:"+data.coord.lon+"&deg</h2>"+
          "<h2>latitude:"+data.coord.lat+"&deg</h2>"+
          "<h2>weather condition:"+data.weather[0].main+"</h2>"+

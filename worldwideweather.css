@@ -4,6 +4,7 @@ body{
   color: white;
   background-attachment: fixed;
   position: absolute;
+  font-size: 15px;
 }
 .navbar-nav {
   display: inline-block;
@@ -12,6 +13,7 @@ body{
 
 .navbar-nav>li {
    display: inline-block;
+   color:black;
 }
 
 .navbar{
@@ -25,7 +27,7 @@ body{
 
 }
 #top{
-  text-decoration-color: black;
+  color: black;
 }
 #sub2{
     background-color: #1a7184;
