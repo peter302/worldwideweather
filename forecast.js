@@ -21,7 +21,9 @@ function forecast(){
   }
 forecast();
 function display(data){
-  return "<h2 style='font-size:15px'>current weather for:"+data.name+" "+data.sys.country+"</h2>"+
+  return "<h2>Thank you for your permission!</h2>"+
+          "<h2>Our system has determined that"+" "+data.name+data.sys.country+" "+"is your nearest weather station</h2>"+
+         "<h2 style='font-size:15px'>current weather for:"+data.name+" "+data.sys.country+"</h2>"+
          "<h2 style='font-size:15px'>longtude:"+data.coord.lon+"&deg</h2>"+
          "<h2 style='font-size:15px'>latitude:"+data.coord.lat+"&deg</h2>"+
          "<h2 style='font-size:15px'>weather condition:"+data.weather[0].main+"</h2>"+
