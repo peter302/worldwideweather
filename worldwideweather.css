@@ -38,3 +38,14 @@ body{
   color: white;
   background-attachment: fixed;
 }
+.footer{
+  margin-top: 100px;
+  height: 100px;
+  margin-left: -90px;
+  text-align: center;
+  margin-right: -90px;
+  color: white;
+  font-size: 30px;
+  background-image: url("dice.jpeg");
+  background-size: cover;
+}

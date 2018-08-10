@@ -22,7 +22,7 @@ function forecast(){
 forecast();
 function display(data){
   return "<h2>Thank you for your permission!</h2>"+
-          "<h2>Our system has determined that"+" "+data.name+data.sys.country+" "+"is your nearest weather station</h2>"+
+          "<h2>Our system has determined that"+" "+data.name+" "+data.sys.country+" "+"is your nearest weather station</h2>"+
          "<h2 style='font-size:15px'>current weather for:"+data.name+" "+data.sys.country+"</h2>"+
          "<h2 style='font-size:15px'>longtude:"+data.coord.lon+"&deg</h2>"+
          "<h2 style='font-size:15px'>latitude:"+data.coord.lat+"&deg</h2>"+
@@ -33,8 +33,8 @@ function display(data){
          "<h2 style='font-size:15px'>temp_max"+data.main.temp_max+"&deg C</h2>"+
          "<h2 style='font-size:15px'>humidity:"+data.main.humidity+"%</h2>"+
          "<h2 style='font-size:15px'>pressure:"+data.main.pressure+"hpa</h2>"+
-         "<h2 style='font-size:15px'>sea_level:"+data.main.sea_level+"hpa</h2>"+
-         "<h2 style='font-size:15px'>grnd_level:"+data.main.grnd_level+"hpa</h2>"+
+         "<h2 style='font-size:15px'>sea_level pressure:"+data.main.sea_level+"hpa</h2>"+
+         "<h2 style='font-size:15px'>grnd_level pressure:"+data.main.grnd_level+"hpa</h2>"+
          "<h2 style='font-size:15px'>wind speed:"+data.wind.speed+"m/s</h2>"+
          "<h2 style='font-size:15px'>wind direction:"+data.wind.deg+"&deg</h2>"+
          "<h2 style='font-size:15px'>clouds:"+data.clouds.all+"%</h2>"
