@@ -1,4 +1,3 @@
-//front-end logic
 $(document).ready(function(){
   $("#error").hide();
   $("#sub2").click(function(event){
