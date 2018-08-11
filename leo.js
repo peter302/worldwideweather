@@ -25,7 +25,7 @@ function display(data){
          "<h2 style='font-size:10px'>longtude:"+data.coord.lon+"&deg</h2>"+
          "<h2 style='font-size:10px'>latitude:"+data.coord.lat+"&deg</h2>"+
          "<h2 style='font-size:10px'>weather condition:"+data.weather[0].main+"</h2>"+
-         "<h2 style='font-size:10px'>weather description:"<img href='http://openweathermap.org/img/w/'+data.weather[0].description+'.png'>+data.weather[0].description+"</h2>"+
+         "<h2 style='font-size:10px'>weather description:"+data.weather[0].description+"</h2>"+
          "<h2 style='font-size:10px'>temp:"+data.main.temp+"&deg C</h2>"+
          "<h2 style='font-size:10px'>temp_min:"+data.main.temp_min+"&deg C</h2>"+
          "<h2 style='font-size:10px'>temp_max"+data.main.temp_max+"&deg C</h2>"+
